@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>AKMO-Smart Charging</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+<script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
+</head>
+<body>
+
+    <div class="background1">
+        <img class="startImg" src="/images/Logo.png">
+        <h1 style="color: rgb(255, 255, 255);">AKMO-Smart Charging</h1>
+        <h2 style="color: rgb(255, 255, 255);">Willkommen bei AKMO</h2>
+       </div>
+
+
+       <div class="eingaben">
+        <h3>Mit dem Batteriespeicher verbinden</h3>
+        <input class="batteriesp" type="file" id="input" />
+        <input id="tag" placeholder="Tag" />
+    </div>
+
+        <br/>
+        <br/>
+        <br/>
+        
+        <div class="auswertung">
+        <h3>Daten zum Batteriespeicher</h3>
+        <table class='table1'>
+            <tbody>
+            <tr className='tr1'>
+                <th class='th1' id="#tag1"> 0</th> 
+                <th class='th1' id="#time"> 0 </th>		
+                <th class='th2' id="#kwh"> 0</th>
+                </tr>
+            <tr class='tr2'
+            ><th class='th1'>ausgwählte Tag</th> 
+            <th class='th1'>ausgwählte Uhrzeit </th>		
+            <th class='th2'>eingespeicherte Strom</th>
+            </tr>
+            </tbody>
+            </table>
+    </div>
+<script src="homepage.js"></script>
+
+<script>
+
+</script>
+
+</body>
+</html>
