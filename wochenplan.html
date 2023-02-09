@@ -14,7 +14,6 @@
     <div class="background1">
         <img style="margin-bottom: 20px; margin-top: 20px;" src="/images/Logo.png">
         <h1 style="color: rgb(255, 255, 255);">AKMO-Smart Charging</h1>
-        <h2 style="color: rgb(255, 255, 255);">Willkommen bei AKMO</h2>
        </div>
              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
@@ -37,41 +36,26 @@
                </li>
             </ul>
          </nav>
+         <br>
 
-        <br/>
-    
-         <div class="eingaben">
-        <h3 style="margin-bottom: 4%;">Verbindung zum Batteriespeicher</h3>
-        <input class="form-control" type="file" id="formFile">
+        <h2 style="margin-bottom: 15px;">Plane deine Fahrt mit AKMO</h2>
+        <div class="eingabenBackground">
+         <h5 style="margin-top: 1%; "> Für einen bestimmten Tag planen</h5>
 
-        <h5 style="margin-top: 4%;"> Eingaben</h5>
-        <div class="inputDiv">
-        <label style="margin-right: 27px;">Tag</label>
-        <input id="tag" placeholder="Tag" />
-    </div>
-    <div class="inputDiv">
-        <label>Uhrzeit</label>
-        <input id="tag" placeholder="Tag" />
-    </div>
+        <div class="eingaben">
+        <div class="inputDiv">       
+        <label class="inputlabel">Tag</label>              
+        <label class="inputlabel" style="margin-right: 3px;">Uhrzeit</label>
 
     </div>
-        <div class="auswertung">
-        <h3 style="align-self: flex-start;">Daten zum Batteriespeicher</h3>
-        <table class='table1'>
-            <tbody>
-            <tr className='tr1'>
-                <th class='th1' id="#tag1"> 0</th> 
-                <th class='th1' id="#time"> 0 </th>		
-                <th class='th2' id="#kwh"> 0</th>
-                </tr>
-            <tr class='tr2'
-            ><th class='th1'>ausgwählte Tag</th> 
-            <th class='th1'>ausgwählte Uhrzeit </th>		
-            <th class='th2'>eingespeicherte Strom</th>
-            </tr>
-            </tbody>
-            </table>
+
+    <div class="inputDiv">        
+        <input class="inputlabel" id="tag" placeholder="Tag" />
+        <input class="inputlabel" id="tag" placeholder="Tag" />
+</div>
     </div>
+</div>
+
 <script src="homepage.js"></script>
 
 <script>

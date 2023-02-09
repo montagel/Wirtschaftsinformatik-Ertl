@@ -13,9 +13,19 @@ body {
             width: 100%;
   }
 
+  .eingabenBackground {
+        background-color: rgba(74, 193, 58, 0.193);
+        padding: 0.5%;
+        border-radius: 5px;
+
+  }
+
   .eingaben {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-content: flex-start;
+    width: 500px;    
+
   }
 
   .auswertung {
@@ -25,6 +35,17 @@ body {
     flex-direction: column;
     text-align: center;
     
+  }
+
+  .inputDiv {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding: 5px;
+  }
+
+  .inputlabel {
+    margin-bottom: 7px;
   }
 
   .file-upload {

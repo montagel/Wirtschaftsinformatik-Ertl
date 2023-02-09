@@ -1,8 +1,10 @@
 
 const input = document.getElementById('input')
+let datenarray;
 
 input.addEventListener('change', () => {
   readXlsxFile(input.files[0]).then((data) => {
+    datenarray = data;
     //console.log(data);
     // `data` is an array of rows
     // each row being an array of cells.
@@ -22,12 +24,31 @@ input.addEventListener('change', () => {
     document.getElementById('#tag1').innerHTML = tag;
     document.getElementById('#kwh').innerHTML = sum.toFixed(3) + " kwh";
     document.getElementById('#time').innerHTML = "2:30 - 23:55";
-
-    
     console.log(sum);
-
   })
+  
 })
+
+
+const dailyChargeNeeded = [];
+let currentCharge = 0;
+
+function addChargeNeed(charge) {
+  dailyChargeNeeded.push(charge);
+}
+
+function checkBattery(currentCharge) {
+  for (let i = 0; i < dailyChargeNeeded.length; i++) {
+    currentCharge -= dailyChargeNeeded[i];
+    if (currentCharge < 0) {
+      console.log(`Du musst dein Auto mit ${Math.abs(currentCharge)}kWh extra beladen, um deine nächste Fahrt zu beenden`);
+      return false;
+    }
+  }
+  console.log(`Du bist bereit für deine Fahrt! Keine extra Ladung wird vor deiner nächsten Fahrt benötigt`)
+  return true;
+}
+
 
 
 function getLivePosition() {
