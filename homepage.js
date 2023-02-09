@@ -1,5 +1,5 @@
 
-const input = document.getElementById('input')
+const input = document.getElementById('formFile')
 let datenarray;
 
 input.addEventListener('change', () => {
