@@ -107,6 +107,10 @@ function berechneBisTag (tag) {
 
   }
 
+  // Kosten
+  let kostenPV = speicherStrom * 0.07;
+  let kostenNetz = fStrom * 0.3;
+  
 
 
   // Werte ergänzen
@@ -117,6 +121,11 @@ function berechneBisTag (tag) {
   document.getElementById('#ladedauerB').innerHTML = ladenSp.toFixed(1) + " h";
   document.getElementById('#ladedauerF').innerHTML = ladeF.toFixed(1) + " h";
   document.getElementById('#zeitV').innerHTML = differenzDate + " (hours:min), (" + timediff.toFixed(1) + " h)";
+  document.getElementById('#kostenNetz').innerHTML = kostenNetz.toFixed(2) + " €";
+  document.getElementById('#kostenPV').innerHTML = kostenPV.toFixed(2) + " €";
+  document.getElementById('#kostenGes').innerHTML = (kostenNetz + kostenPV).toFixed(2) + " €";
+
+
 }
 
 const calculateData = (startTimeStamp, finishTimeStamp) => {    
