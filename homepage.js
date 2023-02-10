@@ -7,7 +7,7 @@ let sum = 0;
     let startTag = 1;
 
 
-//Sat Dec 30 1899 10:10:00
+//Sat Dec 30 1899 10:10: 00
 
 input.addEventListener('change', () => {
   readXlsxFile(input.files[0]).then((data) => {
