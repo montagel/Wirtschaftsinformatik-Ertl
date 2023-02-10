@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>AKMO-Smart Charging</title>
-    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="wochenplan.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
@@ -29,73 +29,81 @@
                   <a class="nav-link" href="/index.html">Statistik</a>
                </li>
                <li class="nav-item">
-                <a class="nav-link" href="/tagesplan.html">Tagesplan</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="/wochenplan.html">Wochenplan</a>
-             </li>
+                  <a class="nav-link" href="/tagesplan.html">Tagesplan</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="/wochenplan.html">Wochenplan</a>
+               </li>
             </ul>
          </nav>
          <br>
 
         <h2 style="margin-bottom: 15px;">Plane deine Fahrt mit AKMO</h2>
-        <div class="eingabenBackground">
+        <div class="eingabenBackground" style="width: 400px;">
         <h5 style="margin-top: 1%; "> Für einen bestimmten Tag planen</h5>
         <div class="eingaben">
 
         <div class="inputDiv">       
-        <label class="inputlabel">Tag</label>              
-        <label class="inputlabel" style="margin-right: 3px;">Startzeit</label>
-        <label class="inputlabel" style="margin-right: 3px;">Endzeit</label>
-        <label class="inputlabel" style="margin-right: 3px;">benötigter Strom</label>
-        <label class="inputlabel" style="margin-right: 3px;">Ladeleistung</label>
+        <label  style="margin-top: 3px;">Tag</label>              
+        <label style="margin-top: 4px;">Startzeit</label>
+        <label  style="margin-top: 4px;">Endzeit</label>
+        <label  style="margin-top: 4px;">benötigter Strom</label>
+        <label  style="margin-top: 4px;">Ladeleistung</label>
     </div>
 
-    <div class="inputDiv">        
+    <div id="#test4" class="inputDiv">        
         <input class="inputlabel" id="PlanTag" placeholder="Tag" />
         <input class="inputlabel" id="startZeit" placeholder="Startzeit zum Laden" />
         <input class="inputlabel" id="endZeit" placeholder="Endzeit zum Laden" />
-        <input class="inputlabel" id="tag" placeholder="benötigter Strom" />
-        <input class="inputlabel" id="tag" placeholder="Ladeleistung" />
+        <input class="inputlabel" id="powerneeded" placeholder="benötigter Strom" />
+        <input class="inputlabel" id="ladeleistung" placeholder="Ladeleistung" />
     </div>
 
 
     </div>
-<button class="planButton" onclick="berechneTag()">plane</button>
 
+    <input class="form-control" type="file" id="formFile" style="width: 330px;">
+<div style="display: flex; flex-direction: row; justify-content: flex-end;"> <button class="planButton" onclick="tagPlanen()">planen</button>
 </div>
+</div>
+
+<div style="visibility: hidden; background-color: rgba(238, 131, 131, 0.85); border-radius: 7px; text-align: center; width: 400px; margin-top: 7px;"  id="#error">ERROR</div>
+
 <h2 style="margin-bottom: 15px;">Ergebnis</h2>
 
-<div class="eingabenBackground">
-    <table class="table">
+<div class="eingabenBackground" style="margin-bottom: 20%; padding: 20px;">
+    <table class="table-striped" style="width: 360px; height: 400px; background-color: rgba(116, 195, 109, 0.119);">
         <thead>
-          
+            <label style="text-align: center; font-weight: 600; font-size: large; margin-left: 65px;">Auswertung der Ergebnisse</label>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
+          <tr >
             <td>verfügbarer Strom im Speicher</td>
-            <td id="speicherstrom">0</td>
+            <td id="#speicherstrom">0</td>
           </tr>
           <tr>
-            <th scope="row">2</th>
             <td>verfügbarer Strom nach Aufladen</td>
-            <td id="test">0</td>
+            <td id="#nachAufladen">0</td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td>Aufladedauer</td>
-            <td>0</td>
+            <td>gesamte Aufladedauer</td>
+            <td id="#ladedauer">0</td>
           </tr>
           <tr>
-            <th scope="row">4</th>
-            <td>Uhrzeit</td>
-            <td>0</td>
+            <td>Aufladedauer am Batteriespeicher</td>
+            <td id="#ladedauerB">0</td>
           </tr>
           <tr>
-            <th scope="row">5</th>
+            <td>fremdbezogene Aufladedauer</td>
+            <td id="#ladedauerF">0</td>
+          </tr>
+          <tr>
+            <td>verfügbare Uhrzeit</td>
+            <td id="#zeitV">0</td>
+          </tr>
+          <tr>
             <td>fremdbezogener Strom</td>
-            <td>0</td>
+            <td id="#fstrom">0</td>
           </tr>
         </tbody>
       </table>
@@ -103,7 +111,7 @@
 </div>
 
 
-<script src="homepage.js"></script>
+<script src="tagesplan.js"></script>
 
 <script>
 

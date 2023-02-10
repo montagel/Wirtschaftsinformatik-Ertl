@@ -1,0 +1,83 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+  }
+
+  .background1 {
+    text-align: center;background: rgb(57,195,34);
+    background: linear-gradient( rgb(126, 234, 107) 0%, rgba(255,255,255,1) 100%);
+            height: 300px;
+            width: 100%;
+  }
+
+  .eingabenBackground {
+        background-color: rgba(74, 193, 58, 0.193);
+        padding: 0.5%;
+        border-radius: 5px;
+
+  }
+
+  .eingaben {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    width: 500px;    
+
+  }
+
+  .auswertung {
+    margin-top: 0.5%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(74, 193, 58, 0.193);
+    border-radius: 5px;
+    width: 500px;        
+  }
+
+  .inputDiv {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding: 5px;
+  }
+
+  .inputlabel {
+    margin-bottom: 7px;
+  }
+
+  .file-upload {
+    background-color: rgb(79, 228, 79);
+}
+
+
+h1, h4, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.planButton {
+    margin: 10px;
+    width: 100px;
+    background-color: rgb(42, 185, 42);
+    border-radius: 5px;
+    border-color: green;
+    color: white;
+}
+
+td {
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
